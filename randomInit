@@ -1,4 +1,0 @@
-function nn_params = randomInit(nn_sizes)
-
-endfunction
-
