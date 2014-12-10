@@ -1,7 +1,5 @@
 function [J grad] = nnCostFunction(nn_params, nn_lsizes, X, y, lambda)
-    y = eye(nn_lsizes(end))(y,:);
-
-    a = X; %ontains horizontal vectors of neuron activation values;
+    a = X; %contains horizontal vectors of neuron activation values;
     indices_a = []; %contains start-end indices for neurons of different layers (to group neurons by layers)
     Jvec_params = []; %useful to regularize Cost Function
     gradvec_params = []; %useful to regularize gradients
@@ -11,10 +9,10 @@ function [J grad] = nnCostFunction(nn_params, nn_lsizes, X, y, lambda)
         ThetaRows = nn_lsizes(i+1);
         ThetaCols = nn_lsizes(i)+1;
         Theta = reshape(nn_params(params_pos+1 : params_pos+ThetaRows*ThetaCols), ThetaRows, ThetaCols);
-
+        
         a = [a  sigmoid([ones(size(a,1),1) a(:,a_pos+1:a_pos+nn_lsizes(i))] * Theta')];
 
-        indices_a = [indices_a [a_pos+1;a_pos+nn_lsizes(i)]];
+        indices_a = [ indices_a [a_pos+1;a_pos+nn_lsizes(i)]];
 
         Jvec_params = [Jvec_params; Theta(:,2:end)(:)];
         Theta(:,1)=0;
@@ -45,24 +43,4 @@ function [J grad] = nnCostFunction(nn_params, nn_lsizes, X, y, lambda)
     grad += lambda/size(a,1) .* gradvec_params;
 
 endfunction
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
