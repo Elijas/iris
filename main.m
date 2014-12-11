@@ -1,8 +1,7 @@
-%TODO is initParams epsilon formula allright?
 function main
 
 % Get Data
-load("irisData.txt");
+load('irisData.txt');
 [X, y, X_cv, y_cv, X_test, y_test, mu, s] = prepareData(irisData);
 y=(y==3); %TODO predict other classes. (to nnCostFunction(if needed):  y = eye(nn_lsizes(end))(y,:);  )
 
