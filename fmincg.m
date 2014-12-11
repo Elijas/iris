@@ -46,9 +46,6 @@ function [X, fX, i] = fmincg(f, X, options, P1, P2, P3, P4, P5)
 % 1) Function name and argument specifications
 % 2) Output display
 %
-% [Elijas D.] Changes Made:
-% 1) Muted one irrelevant warning while the function is executed
-warning('off', 'Octave:possible-matlab-short-circuit-operator');
 
 % Read options
 if exist('options', 'var') && ~isempty(options) && isfield(options, 'MaxIter')
@@ -176,6 +173,4 @@ while i < abs(length)                                      % while not finished
   end
 end
 fprintf('\n');
-
-warning('on', 'Octave:possible-matlab-short-circuit-operator');
 

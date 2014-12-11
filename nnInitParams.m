@@ -1,4 +1,4 @@
-function nn_params = initParams(nn_lsizes)
+function nn_params = nnInitParams(nn_lsizes)
 nn_params=[];
 for i=1:size(nn_lsizes,2)-1
     param_count = nn_lsizes(i+1) * (nn_lsizes(i)+1);
