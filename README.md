@@ -1,7 +1,7 @@
 #Summary
 Welcome to my first Neural Network experiment! Here, I compared performances of Neural Networks with different Network Architectures trained with different regularization parameters lambda.  
   
-The algorithms and some support functions were taken from <a href="https://www.coursera.org/course/ml">Stanford's Machine Learning MOOC</a> videos and homework tasks, but I rewritten parts of it to work with Neural Networks containing any number of layers and elements inside them.  
+The algorithms and some support functions were taken from <a href="https://www.coursera.org/course/ml">Stanford's Machine Learning MOOC</a> videos and homework tasks, but I rewritten parts of it to work with Neural Networks containing any number of layers (and any number ofneurons inside the layers).
   
 - Dataset used: <a href=https://archive.ics.uci.edu/ml/datasets/Iris>Iris</a>  
 - Software used: Octave 3.6.4  
