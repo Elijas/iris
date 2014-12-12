@@ -1,6 +1,5 @@
 %CV - Cross-validation data split is skipped (currently redundant)
-function [X, y, \
-          X_test, y_test, mu, s] = prepareData(data) %CV X_cv, y_cv,
+function [X, y, X_test, y_test, mu, s] = prepareData(data) %CV X_cv, y_cv,
 
 % Scales features
 features = data(:,1:end-1);
