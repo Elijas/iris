@@ -107,3 +107,9 @@ Layers  | Acc. (trn.) | Acc. (test)
  4 7 1  |      69.52% |      71.11% 
 -----------------------------------
 ```
+Update: (got curious whether performance is limited by lack of layers/neurons)
+```
+# Experiment No.4: Training a Large NN
+Training...  (lambda = 0.5, iteration limit = 40000)
+ 4 8 8 8 8 3    |      98.73% |      97.04%
+```
