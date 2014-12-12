@@ -1,8 +1,8 @@
 function [J grad] = nnCostFunction(nn_params, nn_lsizes, X, y, lambda)
     a = X; %contains horizontal vectors of neuron activation values;
-    indices_a = []; %contains start-end indices for neurons of different layers (to group neurons by layers)
-    Jvec_params = []; %useful to regularize Cost Function
-    gradvec_params = []; %useful to regularize gradients
+    indices_a = []; %contains start-end indices for neurons of different layers (for grouping neuron activation values by layers)
+    Jvec_params = []; %used to regularize Cost Function
+    gradvec_params = []; %used to regularize gradients
     a_pos = 0;
     params_pos = 0;
     for i=1:size(nn_lsizes,2)-1;

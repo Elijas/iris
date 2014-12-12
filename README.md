@@ -2,12 +2,25 @@
 Welcome to my first Neural Network experiment! Here, I compared performances of Neural Networks with different Network Architectures trained with different regularization parameters lambda.  
   
 The algorithms and some support functions were taken from <a href="https://www.coursera.org/course/ml">Stanford's Machine Learning MOOC</a> videos and homework tasks, but I rewritten parts of it to work with Neural Networks containing any number of layers (and any number of neurons inside the layers).
-  
+
+Later on, I also got curious about actual NN output relation to individual feature values, but there is no straightforward visual way to do examine such things because of 4 dimensional feature space. I still got pretty satisfactory results by (A) plotting each possible pair of features against each other and (B) running PCA to extract 2 or 3 dimensional features.
+ 
+#Info
 - Dataset used: <a href=https://archive.ics.uci.edu/ml/datasets/Iris>Iris</a>  
-- Software used: Octave 3.6.4  
-- Usage: run `main.m` (note: data is shuffled every time it is acquired. To reproduce experiment results (or run experiments with lambda), uncomment line `load('irisDataPrepared')` in `main.m`)
+- Software used: Octave 3.6.4
+- Contents/Usage:
+  - run* `nnTraining.nn` to train and compare Neural Networks of different sizes
+  - run `plotFeaturePairs.m` and `plotPCA.m` to plot features against trained NN output
+(* note: data is shuffled every time the program is run. To reproduce experiment results seen below (or run experiments with lambda), uncomment the line `load('irisDataPrepared')`)
 
 #Output snapshots
+Update: (got interested whether performance is limited by a lack of layers/neurons, so I ran several additional tests)
+```
+# Experiment No.4: Training a Large NN
+Training...  (lambda = 0.5, iteration limit = 40000)
+ 4 8 8 8 8 3    |      98.73% |      97.04%
+```
+
 ```
 # Experiment No.1: Training a Single Layer Perceptron
 Training...  (lambda = 0, iteration limit = 1000)
@@ -106,10 +119,4 @@ Layers  | Acc. (trn.) | Acc. (test)
  4 6 1  |      69.52% |      71.11% 
  4 7 1  |      69.52% |      71.11% 
 -----------------------------------
-```
-Update: (got curious whether performance is limited by lack of layers/neurons)
-```
-# Experiment No.4: Training a Large NN
-Training...  (lambda = 0.5, iteration limit = 40000)
- 4 8 8 8 8 3    |      98.73% |      97.04%
 ```

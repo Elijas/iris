@@ -1,4 +1,4 @@
-function main
+function nnTraining
 clear,clc
 
 % Acquire Data
