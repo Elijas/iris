@@ -4,15 +4,16 @@ clear,clc
 % Acquire Data
 load('irisDataRaw.txt');
 [X, y, X_test, y_test, data_mu, data_s] = prepareData(irisDataRaw);
-load('irisDataPrepared');
+%load('irisDataPrepared');
 
 % Experiment 1: Single Layer Perceptron
 printf("# Experiment No.1: Training a Single Layer Perceptron\n")
 nn_lsizes = [4 1];
-nn_lambda = .01;
-nn_options = optimset('MaxIter', 200);
+nn_lambda = 3;
+nn_options = optimset('MaxIter', 50);
 
 printf("Training...  (lambda = %g, iteration limit = %d)\n", nn_lambda, nn_options.MaxIter);
+warning('off', 'Octave:possible-matlab-short-circuit-operator');
 [nn_params, cost] = fmincg(@(p) nnCostFunction(p, nn_lsizes, X, y==2, nn_lambda), nnInitParams(nn_lsizes), nn_options);
 predictions = round(nnFeedForward(nn_params, nn_lsizes, X_test));
 printf("Accuracy: %g%% (predicting class 2, test set)\n", mean((y_test==2) == predictions)*100);
@@ -26,8 +27,8 @@ sLast = max(y);         % Units in the last layer
 yExp = eye(sLast)(y,:); % Expand yExp to binaryExp vectors (to prepare for NN learning)
 yExp_test = eye(sLast)(y_test,:);
 
-nn_lambda = .01;
-nn_options = optimset('MaxIter', 1000);
+nn_lambda = 2;
+nn_options = optimset('MaxIter', 100);
 
 printf("Training...  (lambda = %g, iteration limit = %d)\n", nn_lambda, nn_options.MaxIter);
 printf("-----------------------------------\n");
@@ -54,7 +55,7 @@ yExp = eye(sLast)(y,:); % Expand yExp to binaryExp vectors (to prepare for NN le
 yExp_test = eye(sLast)(y_test,:);
 
 nn_lambda = .01;
-nn_options = optimset('MaxIter', 1000);
+nn_options = optimset('MaxIter', 100);
 
 printf("Training...  (lambda = %g, iteration limit = %d)\n", nn_lambda, nn_options.MaxIter);
 printf("-----------------------------------\n");
