@@ -4,7 +4,7 @@ clear,clc
 % Acquire Data
 load('irisDataRaw.txt');
 [X, y, X_test, y_test, data_mu, data_s] = prepareData(irisDataRaw);
-load('irisDataPrepared');
+%load('irisDataPrepared');
 
 % Experiment 1: Single Layer Perceptron
 printf("# Experiment No.1: Training a Single Layer Perceptron\n")
