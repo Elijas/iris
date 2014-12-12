@@ -4,7 +4,7 @@ clear,clc
 % Acquire Data
 load('irisDataRaw.txt');
 [X, y, X_test, y_test, data_mu, data_s] = prepareData(irisDataRaw);
-%load('irisDataPrepared');
+load('irisDataPrepared');
 
 % Experiment 1: Single Layer Perceptron
 printf("# Experiment No.1: Training a Single Layer Perceptron\n")
@@ -27,8 +27,8 @@ sLast = max(y);         % Units in the last layer
 yExp = eye(sLast)(y,:); % Expand yExp to binaryExp vectors (to prepare for NN learning)
 yExp_test = eye(sLast)(y_test,:);
 
-nn_lambda = 2;
-nn_options = optimset('MaxIter', 100);
+nn_lambda = .01;
+nn_options = optimset('MaxIter', 200);
 
 printf("Training...  (lambda = %g, iteration limit = %d)\n", nn_lambda, nn_options.MaxIter);
 printf("-----------------------------------\n");
@@ -55,7 +55,7 @@ yExp = eye(sLast)(y,:); % Expand yExp to binaryExp vectors (to prepare for NN le
 yExp_test = eye(sLast)(y_test,:);
 
 nn_lambda = .01;
-nn_options = optimset('MaxIter', 100);
+nn_options = optimset('MaxIter', 200);
 
 printf("Training...  (lambda = %g, iteration limit = %d)\n", nn_lambda, nn_options.MaxIter);
 printf("-----------------------------------\n");

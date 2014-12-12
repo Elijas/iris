@@ -1,12 +1,12 @@
-#Summary:
+#Summary
 Welcome to my first Neural Network experiment! Here, I compared performances of Neural Networks with different Network Architectures trained with different regularization parameters lambda.  
   
-The algorithms and some support functions were taken from <a href="">Stanford's Machine Learning MOOC</a> videos and homework tasks, but I rewritten parts of it to work with Neural Networks containing any number of layers and elements inside them.  
+The algorithms and some support functions were taken from <a href="https://www.coursera.org/course/ml">Stanford's Machine Learning MOOC</a> videos and homework tasks, but I rewritten parts of it to work with Neural Networks containing any number of layers and elements inside them.  
   
-Dataset used: <a href=https://archive.ics.uci.edu/ml/datasets/Iris>Iris</a>
-Software used: Octave 3.6.4
-Usage: run `main.m`.
-Note: data is shuffled every time it is acquired. To reproduce experiment results (or run experiments with lambda), uncomment line `load('irisDataPrepared');` in `main.m`.
+Dataset used: <a href=https://archive.ics.uci.edu/ml/datasets/Iris>Iris</a>  
+Software used: Octave 3.6.4  
+Usage: run `main.m`.  
+Note: data is shuffled every time it is acquired. To reproduce experiment results (or run experiments with lambda), uncomment line `load('irisDataPrepared')` in `main.m`.
 
 #Output snapshots
 ```
