@@ -1,9 +1,9 @@
 #Summary
-Welcome to my first Neural Network experiment! Here, I compared performances of Neural Networks with different Network Architectures trained with different regularization parameters lambda.  
+Welcome to my first Neural Network experimental project! Here, I compared performances of Neural Networks with different Network Architectures trained with different regularization parameters lambda.  
   
 The algorithms and some support functions were taken from <a href="https://www.coursera.org/course/ml">Stanford's Machine Learning MOOC</a> videos and homework tasks, but I rewritten parts of it to work with Neural Networks containing any number of layers (and any number of neurons inside the layers).
 
-Later on, I also got curious about actual NN output relation to individual feature values, but there is no straightforward visual way to do examine such things because of 4 dimensional feature space. I still got pretty satisfactory results by (A) plotting each possible pair of features against each other and (B) running PCA to extract 2 or 3 dimensional features.
+Update: later on, I also got curious about actual NN output relation to individual feature values, but there is no straightforward visual way to do examine such things because of 4 dimensional feature space. I still got pretty satisfactory results by (A) plotting each possible pair of features against each other and (B) running PCA to extract 2 or 3 dimensional features.
  
 #Info
 - Dataset used: <a href=https://archive.ics.uci.edu/ml/datasets/Iris>Iris</a>  
