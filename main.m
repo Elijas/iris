@@ -7,10 +7,10 @@ load('irisData.txt');
 
 % Experiment 1: Single Layer Perceptron
 disp(" ### Experiment No.1: Using a Single Layer Perceptrons to classify the class 2")
-disp(" ## Learning..");
 nn_lsizes = [4 1];
 nn_lambda = 0;
 nn_options = optimset('MaxIter', 200);
+fprintf(" ## Learning.. (lambda = %f)\n", nn_lambda);
 [nn_params, cost] = fmincg(@(p) nnCostFunction(p, nn_lsizes, X, y==2, nn_lambda), nnInitParams(nn_lsizes), nn_options);
 predictions = round(nnFeedForward(nn_params, nn_lsizes, X_test));
 fprintf(" ## Done. Accuracy of predicting class 2: %f\n", mean((y_test==2) == predictions)*100);
