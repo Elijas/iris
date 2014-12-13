@@ -7,13 +7,13 @@ Update: later on, I also got curious about actual NN output relation to individu
  
 #Info
 - Dataset used: <a href=https://archive.ics.uci.edu/ml/datasets/Iris>Iris</a>  
-- Software used: Octave 3.6.4
-- Contents/Usage:
-  - run* `nnTraining.nn` to train and compare Neural Networks of different sizes
-  - run `plotFeaturePairs.m` and `plotPCA.m` to plot features against trained NN output
+- Software used: Octave 3.6.4  
+- Contents/Usage:  
+  - run* `nnTraining.nn` to train and compare Neural Networks of different sizes  
+  - run `plotFeaturePairs.m` and `plotPCA.m` to plot features against trained NN output  
 (* note: data is shuffled every time the program is run. To reproduce experiment results seen below (or run experiments with lambda), uncomment the line `load('irisDataPrepared')`)
 
-#Output snapshots
+#Output snapshots from nnTraining.m 
 Update: (got interested whether performance is limited by a lack of layers/neurons, so I ran several additional tests)
 ```
 # Experiment No.4: Training a Large NN
