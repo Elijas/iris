@@ -178,5 +178,5 @@ while i < abs(length)                                      % while not finished
   end
 end
 
-printf("\r                                    \r"); % Used instead of printf("\n") to leave output clean
+printf("\r                                     \r"); % Used instead of printf("\n") to leave output clean
 
