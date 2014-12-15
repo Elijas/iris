@@ -26,6 +26,11 @@ indices_a = [indices_a [a_pos+1;a_pos+nn_lsizes(end)]];
 % COST
 Jvec_h = a(:,end-nn_lsizes(end)+1:end)(:);
 Jvec_y = y(:);
+%% Eliminates cases when hypothesis is equal to y. Useful to evade log(0) calculation
+id_nonEqual = find(Jvec_h != Jvec_y);
+Jvec_h = Jvec_h(id_nonEqual);
+Jvec_y = Jvec_y(id_nonEqual);
+%%
 J = -1/size(a,1) .* (Jvec_y'*log(Jvec_h) + (1-Jvec_y)'*log(1-Jvec_h));
 J += lambda/(2*size(a,1)) * sum(sum(Jvec_params.*Jvec_params));
 
