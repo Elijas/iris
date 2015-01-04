@@ -14,11 +14,22 @@ Update: later on, I also got curious about actual NN output relation to individu
 (* note: data is shuffled every time the program is run. To reproduce experiment results seen below (or run experiments with lambda), uncomment the line `load('irisDataPrepared')`)
 
 #Output snapshots from nnTraining.m 
+Update 2: (Added polynomial features (up to third degree), got better test set accuracy)
+```
+Training...  (lambda = 2.2, iteration limit = 200)
+-----------------------------------
+Layers  | Acc. (trn.) | Acc. (test)
+ 34 3   |      98.41% |     100.00%
+ 34 1   |      97.14% |     100.00%
+-----------------------------------
+```
+
 Update: (got interested whether performance is limited by a lack of layers/neurons, so I ran several additional tests)
 ```
 # Experiment No.4: Training a Large NN
 Training...  (lambda = 0.5, iteration limit = 40000)
  4 8 8 8 8 3    |      98.73% |      97.04%
+ 4 150 3       |      98.73% |      97.04%
 ```
 
 ```
