@@ -24,14 +24,15 @@ Layers  | Acc. (trn.) | Acc. (test)
 -----------------------------------
 ```
 
-Update: (got interested whether performance is limited by a lack of layers/neurons, so I ran several additional tests)
+Update 1: (got interested whether performance is limited by a lack of layers/neurons, so I ran several additional tests)
 ```
 # Experiment No.4: Training a Large NN
 Training...  (lambda = 0.5, iteration limit = 40000)
  4 8 8 8 8 3    |      98.73% |      97.04%
- 4 150 3       |      98.73% |      97.04%
+ 4 150 3        |      98.73% |      97.04%
 ```
 
+Experiments with different lambda parameters and NN architectures:
 ```
 # Experiment No.1: Training a Single Layer Perceptron
 Training...  (lambda = 0, iteration limit = 1000)
