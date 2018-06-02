@@ -1,11 +1,11 @@
-#Summary
+# Summary
 Welcome to my first Neural Network experimental project! Here, I compared performances of Neural Networks with different Network Architectures trained with different regularization parameters lambda.  
   
-The algorithms and some support functions were taken from <a href="https://www.coursera.org/course/ml">Stanford's Machine Learning MOOC</a> videos and homework tasks, but I rewritten parts of it to work with Neural Networks containing any number of layers (and any number of neurons inside the layers).
+The algorithms and some support functions were taken from <a href="https://www.coursera.org/course/ml">Stanford's Machine Learning MOOC</a> videos and homework tasks, but I've rewritten parts of it to work with Neural Networks containing any number of layers (and any number of neurons inside the layers).
 
 Update: later on, I also got curious about actual NN output relation to individual feature values, but there is no straightforward visual way to do examine such things because of 4 dimensional feature space. I still got pretty satisfactory results by (A) plotting each possible pair of features against each other and (B) running PCA to extract 2 or 3 dimensional features.
  
-#Info
+# Info
 - Dataset used: <a href=https://archive.ics.uci.edu/ml/datasets/Iris>Iris</a>  
 - Software used: Octave 3.6.4  
 - Contents/Usage:  
@@ -13,7 +13,7 @@ Update: later on, I also got curious about actual NN output relation to individu
   - run `plotFeaturePairs.m` and `plotPCA.m` to plot features against trained NN output  
 (* note: data is shuffled every time the program is run. To reproduce experiment results seen below (or run experiments with lambda), uncomment the line `load('irisDataPrepared')`)
 
-#Output snapshots from nnTraining.m 
+# Output snapshots from nnTraining.m 
 Update 2: (Added polynomial features (up to third degree), got better test set accuracy)
 ```
 Training...  (lambda = 2.2, iteration limit = 200)
